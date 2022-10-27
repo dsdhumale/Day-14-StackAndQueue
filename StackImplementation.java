@@ -6,6 +6,7 @@ public class StackImplementation {
 	public StackImplementation() {
 		this.top = top;
 	}
+
 //Method for pushing element in stack
 	public void push(int element) {
 
@@ -19,7 +20,8 @@ public class StackImplementation {
 		}
 
 	}
-	//Method for displaying elements of stack
+
+	// Method for displaying elements of stack
 	public void display() {
 		if (top == null)
 			System.out.println("Stack is empty");
@@ -31,6 +33,24 @@ public class StackImplementation {
 			}
 			System.out.println(temp.data);
 
+		}
+	}
+
+	// Method for displaying top element of stack
+	public void peek() {
+		System.out.println(" Top element of stack is = " + top.data);
+
+	}
+
+	// Method for delete element of stack
+	public void pop() {
+		if (top == null)
+			System.out.println("stack is empty");
+		else {
+			Node temp = top;
+			System.out.println("deleted element is:" + temp.data);
+
+			top = temp.next;
 		}
 	}
 }
