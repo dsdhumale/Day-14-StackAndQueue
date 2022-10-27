@@ -30,4 +30,19 @@ public class QueueImplementation {
 			System.out.println(temp.data);
 		}
 	}
+
+	// Method for delete element from queue or dequeue operation
+	public void dequeue() {
+		if (front == null)
+			System.out.println("\n" + "Queue Underflow");
+
+		Node temp = front;
+		System.out.printf("Removing %d\n", temp.data);
+		front = front.next;
+
+		if (front == null)
+			rear = null;
+
+	}
+
 }
